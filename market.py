@@ -14,5 +14,4 @@ def market_page():
     {'id': 3, 'name': 'Keyboard', 'barcode': '231985128446', 'price': 150}
     ]
 
-    return render_template('market.html', item_name= items)
-    
+    return render_template('market.html', items= items)

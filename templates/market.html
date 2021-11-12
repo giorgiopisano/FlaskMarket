@@ -44,20 +44,19 @@
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Barcode</th>
-                <th scope="col">Price</th>
-                
-
+                <th scope="col">Price</th>               
             </tr>
         </thead>
         <tbody>
             <!-- Your rows inside the table HERE: -->
+            {% for item in items %}
                 <tr>
                     <td>Value for Id</td>
                     <td>Value for Name</td>
                     <td>Value for Barcode</td>
-                    <td>Value for Price</td>
-                    
+                    <td>Value for Price</td> 
                 </tr>
+            {% endfor %} 
         </tbody>
     </table>
 
