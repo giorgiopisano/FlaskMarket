@@ -15,3 +15,4 @@ def market_page():
     ]
 
     return render_template('market.html', item_name= items)
+    
