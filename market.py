@@ -10,6 +10,10 @@ class Item(db.Model):
     price = db.Column(db.Integer(), nullable=False)
     barcode = db.Column(db.String(length=12), nullable=False, unique=True)
     description = db.Column(db.String(length=1024), nullable=False, unique=True)
+
+    def __repr__(self):
+        return f"Item {self.name}"
+
 @app.route('/')
 @app.route('/home')
 def home_page():
@@ -17,10 +21,6 @@ def home_page():
 
 @app.route('/market')
 def market_page():
-    items = [
-    {'id': 1, 'name': 'Strawberry Matcha', 'barcode': '893212299897', 'price': 5.00},
-    {'id': 2, 'name': 'Lychee', 'barcode': '123985473165', 'price': 4.80},
-    {'id': 3, 'name': 'Ube', 'barcode': '231985128446', 'price': 4.80}
-    ]
+    items = Item.query.all()
 
     return render_template('market.html', items= items)
