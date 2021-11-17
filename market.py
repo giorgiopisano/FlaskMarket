@@ -15,7 +15,11 @@ class Item(db.Model):
         return f"Item {self.name}"
 
 @app.route('/')
+<<<<<<< HEAD
 @app.route('/home')
+=======
+@app.route('/home')
+>>>>>>> ca4870bdf3eaa3328e31227a920190118c592df0
 def home_page():
     return render_template('home.html')
 
