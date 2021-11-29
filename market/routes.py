@@ -7,10 +7,6 @@ from flask_login import login_user, logout_user, login_required
 
 @app.route('/')
 
-@app.route('/description')
-def description_page():
-    return render_template('description.html')
-
 @app.route('/home')
 def home_page():
     return render_template('home.html')
@@ -20,6 +16,10 @@ def home_page():
 def market_page():
     items = Item.query.all()
     return render_template('market.html', items=items)
+
+@app.route('/description')
+def description_page():
+    return render_template('description.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
