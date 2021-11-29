@@ -31,7 +31,9 @@ Choose a Flavor!
                <td> ${{ item.price }} </td>
                <td>
                   <button class="more_info_button" data-toggle="modal" data-target="#Modal-MoreInfo-{{ item.id }}">More Info</button>
+                  <button class="Ingredients_button" data-toggle="modal" data-target="#Modal-Ingredients-{{ item.id }}">Ingredients</button>  
                   <button class="purchase_button" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{ item.id }}">Purchase this Item</button>  
+                               
                </td>
             </tr>
             {% endfor %} 
@@ -40,7 +42,7 @@ Choose a Flavor!
    </div>
    <div class="col-4">
         <h2>Shopping Cart</h2>
-        <p>Click on Return Iem to put an remove from cart</p>
+        <p>Click on Return Item to put an remove from cart</p>
         <br>
    </div>
 </div>
